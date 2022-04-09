@@ -17,8 +17,9 @@ function App() {
 
         <h1>Pizza Order</h1>
         <form>
-          <label>Your name</label>
-          <input value={name} onChange={(e) => setName(e.target.value)}></input>
+          <label>
+          <input placeholder='name' value={name} onChange={(e) => setName(e.target.value)}></input>
+          </label>
 
           <label>
           <input type="checkbox"
@@ -52,13 +53,13 @@ function App() {
             Onions
           </label>
 
-          <input type="submit"/>
+          <button>Submit</button>
         </form>
 
       </div>
       <div className='display'>
         <h2>Your order</h2>
-        <p>{name}</p>
+        <h3>{name}</h3>
         {pepperoni && <p>Pepperoni</p>}
         {sausage && <p>Sausage</p>}
         {peppers && <p>Peppers</p>}
